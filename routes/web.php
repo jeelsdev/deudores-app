@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    // Clients
+    Route::prefix('/clients')->group(function () {
+        Route::get('/',[ClientController::class,'index'])->name('client.index');
+    });
+
 });

@@ -24,16 +24,7 @@
             <x-layouts.navigation-menu />
             <x-layouts.sidebar-menu />
             <div class="p-4 sm:ml-64">
-                <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-                    <!-- Page Heading -->
-                    @if (isset($header))
-                        <header class="bg-white shadow">
-                            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                                {{ $header }}
-                            </div>
-                        </header>
-                    @endif
-        
+                <div class="p-4">
                     <!-- Page Content -->
                     <main>
                         {{ $slot }}
